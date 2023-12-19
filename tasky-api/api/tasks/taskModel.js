@@ -4,7 +4,16 @@ const Schema = mongoose.Schema;
 
 const TaskSchema = new Schema({
   title: { type: String, required: true },
-  priority: { type: String, enum: ["Low", "Medium", "High"], required: true },
+  description:  String ,
+  deadline: Date,
+    done: Boolean,
+    priority: { type: String, enum: ["Low", "Medium", "High"], required: true },
+    created_at: Date,
+    updated_at: Date,
+    userId: {
+      type: Schema.Types.ObjectId,
+      ref: 'User'
+  },
 });
 
 const dateValidator = (date) => {
