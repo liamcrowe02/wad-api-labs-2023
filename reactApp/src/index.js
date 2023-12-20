@@ -6,6 +6,7 @@ import ProfilePage from "./pages/profilePage";
 import MoviesPage from "./pages/moviesPage";
 import { QueryClientProvider, QueryClient } from "react-query";
 import LoginPage from "./pages/loginPage";
+import SignUpPage from "./pages/signUpPage";  // New import statement
 import AuthContextProvider from "./contexts/authContext";
 import ProtectedRoutes from "./protectedRoutes";
 import Header from "./components/siteHeader";
@@ -36,9 +37,13 @@ const App = () => {
             <li>
               <Link to="/profile">Profile</Link>
             </li>
+            <li>
+              <Link to="/signup">Sign Up</Link>  {/* Added link to SignUpPage */}
+            </li>
           </ul>
           <Routes>
             <Route path="/" element={<PublicPage />} />
+            <Route path="/signup" element={<SignUpPage />} />  {/* Added Route for SignUpPage */}
             <Route path="/login" element={<LoginPage />} />
             <Route element={<ProtectedRoutes />}>
               <Route path="/movies" element={<MoviesPage />} />
@@ -52,5 +57,5 @@ const App = () => {
   );
 };
 
-const rootElement = createRoot( document.getElementById("root") )
+const rootElement = createRoot(document.getElementById("root"));
 rootElement.render(<App />);
