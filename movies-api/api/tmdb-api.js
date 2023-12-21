@@ -15,3 +15,14 @@ export const getUpcomingMovies = async () => {
         throw error;
     }
 };
+
+export const getTrendingMovies = async () => {
+    const response = await fetch(
+      'http://localhost:8080/api/movies', {
+      headers: {
+        'Authorization': window.localStorage.getItem('token')
+      }
+    }
+    )
+    return response.json();
+  }; 
