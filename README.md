@@ -37,4 +37,16 @@ This command is to quickly create a local server that serves the static files fr
 
    * Movies and users are connected to Mongo database. You can pull and get movies and user information.
 
+2. **Movies Overview, IMG, and release date**
+
+   <img src="img/Screenshot 2023-12-22 162721.png" alt="Image" width="700" height="500">
+
+   * Added movies overview, images, and release date.
+
+3. **Validation for Singup/Login**
+
+   <img src="img/Screenshot 2023-12-22 162545.png" alt="Image" width="700" height="500">
+
+   * Added frontend error messages for login and sign up.
+
 
