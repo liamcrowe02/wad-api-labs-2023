@@ -20,7 +20,7 @@ export const PublicPage = () => {
             {movies.map(movie => { return <>{movie.id},{movie.title}<br /></> })}
         </div>
     )
-       return <div><h2>Movies</h2>{moviesDisplay}</div>
+       return <div><h2>Public</h2>{moviesDisplay}</div>
               
  }
  export const Profile = () => {
